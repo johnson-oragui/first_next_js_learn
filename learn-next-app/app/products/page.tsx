@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 
 
-
 const Products = () => {
     const products = [
         {id: 1, name: 'PC', price: '$1200', description: 'Just a PC'},
@@ -10,14 +9,14 @@ const Products = () => {
         {id: 3, name: 'Timberland', price: '$1200', description: 'Just a Timberland'}
     ];
     return (
-        <div>
-            <h1>
+        <div className='container mx-auto px-4 py-4'>
+            <h1 className='text-3xl font-bold mb-6'>
                 Products
             </h1>
-                <ul>
+                <ul className='space-y-4'>
                     {products.length > 0 ? (
                         products.map((product) => (
-                            <li key={product.id} className='product'>
+                            <li key={product.id} className='inline-flex p-4 border rounded-lg shadow-lg'>
                                 <Link href={`/products/${product.id}`}>
                                     {product.name}
                                 </Link>
