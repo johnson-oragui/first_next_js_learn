@@ -13,12 +13,12 @@ const ProductDetail = ({ params }: { params: { id: string } }) => {
   const product = productData[id];
 
   if (!product) {
-    return <p>Product not found</p>;
+    return <p className='text-blue-800'>Product not found</p>;
   }
 
   return (
-    <div>
-      <h1>Name: {product.name}</h1>
+    <div className='bg-green-900 mt-10 p-10'>
+      <h1 className=''>Name: {product.name}</h1>
       <p>Price: {product.price}</p>
       <p>Description: {product.description}</p>
     </div>
